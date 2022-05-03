@@ -34,7 +34,7 @@ for index, row in planet_df_1.iterrows():
 
      ## ADGREGA CÓDIGO AQUÍ ##
 
-     # Lllama a scrape_more_data(<hyperlink>)
+     # Llama a scrape_more_data(<hyperlink>)
 
     print(f"La extracción de datos del hipervínculo {index+1} se ha completado")
 
