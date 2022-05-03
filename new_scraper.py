@@ -5,10 +5,10 @@ import requests
 import time
 import pandas as pd
 
-# NASA Exoplanet URL
+# Enlace a NASA Exoplanet
 START_URL = "https://exoplanets.nasa.gov/exoplanet-catalog/"
 
-# Webdriver
+# Controlador web
 browser = webdriver.Chrome("D:/Setup/chromedriver_win32/chromedriver.exe")
 browser.get(START_URL)
 
@@ -19,7 +19,7 @@ new_planets_data = []
 def scrape_more_data(hyperlink):
     print(hyperlink)
     
-    ## ADD CODE HERE ##
+    ## AGREGA CÓDIGO AQUÍ ##
 
 
 
@@ -29,23 +29,23 @@ def scrape_more_data(hyperlink):
 
 planet_df_1 = pd.read_csv("updated_scraped_data.csv")
 
-# Call method
+# Llamar al método
 for index, row in planet_df_1.iterrows():
 
-     ## ADD CODE HERE ##
+     ## ADGREGA CÓDIGO AQUÍ ##
 
-     # Call scrape_more_data(<hyperlink>)
+     # Lllama a scrape_more_data(<hyperlink>)
 
-    print(f"Data Scraping at hyperlink {index+1} completed")
+    print(f"La extracción de datos del hipervínculo {index+1} se ha completado")
 
 print(new_planets_data)
 
-# Remove '\n' character from the scraped data
+# Remover el carácter '\n' de los datos extraídos
 scraped_data = []
 
 for row in new_planets_data:
     replaced = []
-    ## ADD CODE HERE ##
+    ## AGREGAR EL CÓDIGO AQUÍ ##
 
 
     
@@ -57,5 +57,5 @@ headers = ["planet_type","discovery_date", "mass", "planet_radius", "orbital_rad
 
 new_planet_df_1 = pd.DataFrame(scrapped_data,columns = headers)
 
-# Convert to CSV
+# Convertir a CSV
 new_planet_df_1.to_csv('new_scraped_data.csv', index=True, index_label="id")
