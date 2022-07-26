@@ -32,15 +32,15 @@ planet_df_1 = pd.read_csv("updated_scraped_data.csv")
 # Llamar al método
 for index, row in planet_df_1.iterrows():
 
-     ## ADGREGA CÓDIGO AQUÍ ##
+     ## AGREGA CÓDIGO AQUÍ ##
 
-     # Llama a scrape_more_data(<hyperlink>)
+     # Llama a scrape_more_data(<hypervínculo>)
 
     print(f"La extracción de datos del hipervínculo {index+1} se ha completado")
 
 print(new_planets_data)
 
-# Remover el carácter '\n' de los datos extraídos
+# Remover el caracter '\n' de los datos extraídos
 scraped_data = []
 
 for row in new_planets_data:
